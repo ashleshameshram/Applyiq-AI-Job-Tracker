@@ -1,5 +1,4 @@
 import { Box, Typography, Stack } from '@mui/material';
-import TipsAndUpdatesOutlinedIcon from '@mui/icons-material/TipsAndUpdatesOutlined';
 
 export default function AIAssistantHeader() {
   return (
@@ -20,10 +19,6 @@ export default function AIAssistantHeader() {
         justifyContent: 'center',
         flexShrink: 0,
       }}>
-        <TipsAndUpdatesOutlinedIcon sx={{
-          fontSize: { xs: 20, sm: 26, md: 32 },
-          color: '#30003a',
-        }} />
       </Box>
 
       {/* Title + subtitle stacked */}
@@ -34,7 +29,7 @@ export default function AIAssistantHeader() {
             fontWeight: 700,
             color: '#120038',
             lineHeight: 1.4,
-            fontSize: { xs: '1rem', sm: '1.15rem', md: '1.4rem' },
+            fontSize: { xs: '1.1rem',sm: '1.35rem',md: '1.7rem' },
           }}>
           AI Assistant
         </Typography>

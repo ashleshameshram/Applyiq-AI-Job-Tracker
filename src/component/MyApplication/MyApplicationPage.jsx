@@ -154,7 +154,7 @@ export default function MyApplicationPage() {
     ];
 
     return(
-        <Box sx={{ px: { xs: 1.5, sm: 2, md: 3 }, pt: { xs: 9, sm: 10,md:7 } }}>
+        <Box sx={{ px: { xs: 1.5, sm: 2, md: 3 }, pt: { xs: 14, sm: 10, md:7 } }}>
             <AddApplicationRow onAddcard={handleAddCard}/>
             <StatsBar applications={applications}/>
             

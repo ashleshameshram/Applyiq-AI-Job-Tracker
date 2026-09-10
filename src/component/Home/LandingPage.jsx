@@ -30,7 +30,7 @@ export default function LandingPage() {
         justifyContent: { xs: 'flex-start', md: 'center' },
         textAlign: 'center',
         px: { xs: 3, sm: 2.5, md: 3 },
-        pt: { xs: 12, sm: 13, md: 0 },
+        pt: { xs: 17, sm: 13, md: 0 },
         pb: { xs: 4, md: 0 },
         backgroundImage:
           'linear-gradient(120deg, #0B1F2A 0%, #1B1035 35%, #2A1B45 55%, #0B1F2A 100%)',
@@ -71,7 +71,7 @@ export default function LandingPage() {
       </Box>
 
       {/* Headline — two-part hierarchy */}
-      <Box sx={{ mb: { xs: 6, sm: 4, md: 3.5 } }}>
+      <Box sx={{ mb: { xs: 2, sm: 3, md: 3.5 } }}>
         <Typography
           sx={{
             fontFamily: "'Sora', sans-serif",
@@ -119,7 +119,8 @@ export default function LandingPage() {
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1.5, sm: 2 }}
-        sx={{ width: { xs: '100%', sm: 'auto' }, maxWidth: { xs: 260, sm: 'none' }, mb: { xs: 3.5, sm: 4.5, md: 5 } }}
+        sx={{ width: { xs: '100%', sm: 'auto' }, 
+        maxWidth: { xs: 260, sm: 'none' }, mb: { xs: 8, sm: 4.5, md: 8 } }}
       >
         <Button
          onClick={() => navigate('/myapplications')}
@@ -161,7 +162,7 @@ export default function LandingPage() {
       {/* Feature highlights strip — always a single row */}
       <Stack
         direction="row"
-        spacing={{ xs: 1.25, sm: 3.5, md: 4 }}
+        spacing={{ xs: 1.35, sm: 3.5, md: 4 }}
         alignItems="center"
         divider={
           <Box sx={{

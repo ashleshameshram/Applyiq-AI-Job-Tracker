@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <Box sx={{
             position: 'fixed',
-            top: { xs: 12, sm: 18, md: 20 },
+            top: { xs: 26, sm: 18, md: 20 },
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 1200,
@@ -40,7 +40,7 @@ export default function Navbar() {
                         component={Link}
                         to={link.path}
                         sx={{
-                            fontSize: { xs: '1rem', sm: '0.85rem', md: '1.3rem' },
+                            fontSize: { xs: '1rem', sm: '0.85rem', md: '1.1rem' },
                             fontWeight: 500,
                             color: '#30003a',
                             textDecoration: 'none',
