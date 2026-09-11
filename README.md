@@ -33,6 +33,14 @@ So along with tracking, ApplyIQ does two extra things:
   <img src="./public/HOME.png" alt="ApplyIQ Home Page" width="900"/>
 </p>
 
+## AI Usage Note
+
+The AI features in this project use the **Gemini API** to generate Resume & Job Description Match results and Interview Preparation questions.
+
+The project currently uses the Gemini API's available usage limits. Because of these limits, the AI features may become temporarily unavailable after the daily request quota is reached. The daily quota is reset periodically, after which the AI features can be used again.
+
+If the usage limit is reached, the application will display a message informing the user that the AI service is temporarily unavailable. The rest of the application remains available to explore.
+
 ## About me
 
 Made by Ashlesha Meshram — learning frontend development, building this as a portfolio project.

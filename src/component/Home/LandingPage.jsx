@@ -52,7 +52,7 @@ export default function LandingPage() {
           borderRadius: '100px',
           border: '1px solid rgba(232,152,94,0.35)',
           background: 'rgba(232,152,94,0.08)',
-          mb: { xs: 2, sm: 3, md: 3.5 },
+          mb: { xs: 1.5, sm: 2, md: 2.25 },
         }}
       >
         <Box sx={{ width: 6, height: 6, borderRadius: '50%', background: '#E8985E' }} />
@@ -69,6 +69,23 @@ export default function LandingPage() {
           ApplyIQ · AI Job Tracker
         </Typography>
       </Box>
+
+      {/* Welcome line */}
+      <Typography
+        sx={{
+          fontFamily: "'Sora', sans-serif",
+          fontWeight: 600,
+          letterSpacing: '0.02em',
+          fontSize: { xs: '1.26rem', sm: '1.40rem', md: '1.70rem' },
+          background: 'linear-gradient(90deg, #F4EFE6 0%, #E8985E 50%, #F4EFE6 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          mb: { xs: 1.25, sm: 1.75, md: 2 },
+        }}
+      >
+        Welcome to ApplyIQ ✨
+      </Typography>
 
       {/* Headline — two-part hierarchy */}
       <Box sx={{ mb: { xs: 2, sm: 3, md: 3.5 } }}>
