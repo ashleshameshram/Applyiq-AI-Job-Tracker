@@ -54,16 +54,20 @@ export default async function handler(req,res){
     }
 
     Rules:
-    - matchScore: 0-100, based on required skills, experience level, and keyword overlap.
+    - First, extract the required skills for THIS specific role from the job description. The role can be from any field — technical, creative, medical, sales, administrative, or anything else. Do not limit extraction to any one category.
+    - For each required skill you extract, silently determine whether the resume demonstrates it or not.
+    - matchScore MUST be calculated using this exact formula — do not estimate or adjust it:
+    matchScore = round((number of matched required skills / total number of required skills) * 100)
+    - Do not adjust matchScore based on experience level, seniority, tone, or any factor outside the formula above.
     - Do not invent skills, companies, or experience not present in the resume.
-    - When the JD lists alternatives with "or" (e.g. "React, Next.js, or Angular"), satisfying ONE alternative counts as matched — do not list the others as missing.
-    - If the resume satisfies none of an "or" group (e.g. "Sass or Tailwind"), list it as ONE missing skill, not separate ones.
-    - Only extract skills that are concrete, named tools, technologies, frameworks, languages, or well-established practices (e.g. "React", "Cross-Browser Testing", "Agile") — never paraphrase a JD responsibility or duty sentence into a skill label (e.g. do NOT invent phrases like "UI/UX Translation" from a sentence about converting designs to code).
+    - When the JD lists alternatives with "or" (e.g. "React, Next.js, or Angular"), satisfying ONE alternative counts as one matched skill — do not list the others as missing.
+    - If the resume satisfies none of an "or" group (e.g. "Sass or Tailwind"), count and list it as ONE missing skill, not separate ones.
+    - Only extract skills that are concrete, named tools, technologies, frameworks, languages, certifications, or well-established practices (e.g. "React", "Cross-Browser Testing", "Agile", "Phlebotomy", "Cold Calling") — never paraphrase a JD responsibility or duty sentence into a skill label.
     - Do not list a skill as missing if it is a subset or direct implication of a skill already listed as matched (e.g. do not list "JSON" as missing if "RESTful APIs" is already matched).
     - matchedSkills: max 8. missingSkills: max 6.
     - strengths: 2-3 short bullets, each under 12 words.
     - improvementSuggestions: 2-3 short, actionable bullets, each under 15 words.
-
+    
     RESUME:
     ${resumeText}
 
